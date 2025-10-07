@@ -1,4 +1,8 @@
-﻿# script.rpy - Awal Petualangan Semana Santa
+﻿label splashscreen:
+    $ renpy.movie_cutscene("videos/logo.mp4")
+    jump start
+
+# script.rpy - Awal Petualangan Semana Santa
 
 # === Definisi Karakter ===
 define p = Character("Paulus", color="#56A0D3")
@@ -168,10 +172,11 @@ label sampai_di_gereja:
     scene bg depan
     with fade
     hide anak
-    narrator "Akhirnya kamu dan Maria sampai di depan gereja, bersama kerumunan umat yang sudah menanti."
-    narrator "Skor sementaramu: [score]."
     show paulus at left, perbesar
     show maria at right, perbesar
+    narrator "Akhirnya kamu dan Maria sampai di depan gereja, bersama kerumunan umat yang sudah menanti."
+    narrator "Skor sementaramu: [score]."
+    
     # lanjut ke misi misa pembukaan
     return
 

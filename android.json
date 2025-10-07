@@ -1,0 +1,24 @@
+{
+    "expansion": false,
+    "google_play_key": null,
+    "google_play_salt": null,
+    "heap_size": "3",
+    "icon_name": "Semana Santa Adventure",
+    "include_pil": false,
+    "include_sqlite": false,
+    "layout": null,
+    "name": "Semana Santa Adventure",
+    "numeric_version": 1,
+    "orientation": "sensor",
+    "package": "com.semanasanta.sella",
+    "permissions": [
+        "VIBRATE",
+        "INTERNET"
+    ],
+    "source": false,
+    "store": "play",
+    "update_always": true,
+    "update_icons": true,
+    "update_keystores": true,
+    "version": "1.0"
+}
