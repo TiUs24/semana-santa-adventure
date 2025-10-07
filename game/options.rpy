@@ -153,8 +153,8 @@ define config.save_directory = "SemanaSantaAdventure-1759114733"
 ##
 ## Ikon yang di tampilkan di taskbar atau dock.
 
-define config.window_icon = "gui/window_icon.png"
-
+#define config.window_icon = "android-icon.png"
+define config.window_icon = "gui/android-icon.png"
 
 ## Pengaturan Build ############################################################
 ##
@@ -162,31 +162,20 @@ define config.window_icon = "gui/window_icon.png"
 ## distribusi.
 
 init python:
-
-    ## Fungsi berikut mengambil pola file. Pola file merupakan case-
-    ## insensitiv, dan sama dengan arah direktori dasar, dengan atau tanpa
-    ## awalan /. Jika banyak pola sama, yang pertama yang akan di gunakan.
-    ##
-    ## Di dalam pola:
-    ##
-    ## / Ini adlaah
-    ##
-    ## * mencocokan semua karakter, kecuali pemisah direktori.
-    ##
-    ## ** mencocokan semua karakter, termasuk pemisah direktori.
-    ##
-    ## Contohnya, "*.txt" mencocokan file txt di direktori dasar, "game/**.ogg"
-    ## matches ogg files in the game directory or any of its subdirectories, and
-    ## "**.psd" matches psd files anywhere in the project.
-
-    ## Mengklasifikasi file sebagai None  untuk memisahkannya dari distribusi
-    ## build.
-
     build.classify('**~', None)
     build.classify('**.bak', None)
     build.classify('**/.**', None)
     build.classify('**/#**', None)
     build.classify('**/thumbs.db', None)
+
+    # Jangan hapus ikon dan splash, jadi baris berikut harus DIHAPUS atau dikomentari:
+    # build.classify('game/gui/android-icon.png', None)
+    # build.classify('game/gui/android-presplash.png', None)
+
+    # Tentukan splash screen dan ikon android
+    build.android_presplash_image = "gui/android-presplash.png"
+    build.android_icon_foreground = "gui/android-icon.png"
+    build.android_icon_background = "#ffffff"  # opsional, warna latar belakang
 
     ## Untuk mengarsipkan file, mengklasifikasikannya sebagai 'archive'.
 

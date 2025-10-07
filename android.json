@@ -9,7 +9,7 @@
     "layout": null,
     "name": "Semana Santa Adventure",
     "numeric_version": 1,
-    "orientation": "sensor",
+    "orientation": "sensorLandscape",
     "package": "com.semanasanta.sella",
     "permissions": [
         "VIBRATE",

@@ -1,6 +1,14 @@
 ﻿label splashscreen:
-    $ renpy.movie_cutscene("videos/logo.mp4")
-    jump start
+    scene black
+    with fade
+    pause 0.5
+
+    show splash_custom
+    with dissolve
+    pause 3.0
+
+    return
+
 
 # script.rpy - Awal Petualangan Semana Santa
 
